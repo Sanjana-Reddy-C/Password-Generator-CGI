@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h1>Password<br>Generator</h1>
+
+  <!-- Strength -->
+  <label>Password Strength</label>
+  <select id="strengthSelect">
+    <option value="">Select strength</option>
+    <option value="low">Low</option>
+    <option value="medium">Medium</option>
+    <option value="strong">Strong</option>
+  </select>
+
+  <!-- Length -->
+  <label id="lengthLabel">Password Length: 12</label>
+  <input type="range" id="length" min="4" max="20" value="12">
+
+
+  <!-- Character options -->
+  <div class="checks">
+    <label><input type="checkbox" id="lower"> Lowercase (a-z)</label>
+    <label><input type="checkbox" id="upper"> Uppercase (A-Z)</label>
+    <label><input type="checkbox" id="digits"> Digits (0-9)</label>
+    <label><input type="checkbox" id="special"> Special (!@#$%)</label>
+  </div>
+
+  <button onclick="generate()">Generate Password</button>
+
+  <!-- Output -->
+  <div class="output">
+    <p>Generated Password:</p>
+    <div id="password">********</div>
+    <p id="strength" class="strength">Strength: —</p>
+  </div>
+
+  <!-- History -->
+  <h3>Password History</h3>
+  <div id="history"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
