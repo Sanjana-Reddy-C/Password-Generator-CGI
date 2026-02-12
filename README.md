@@ -26,3 +26,4 @@ password and strength.
 ## Contributors
 - Sanjana Reddy
 - Prerana B R
+- Ananya Paniraj
